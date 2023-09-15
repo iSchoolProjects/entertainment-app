@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import {getMovies} from '../api';
-export default function Home() {
-  const [allMovies, setAllMovies]= useState([])
+export default function Movies() {
+  const [singleMovie, setSingleMovie]= useState([])
 
   const getData = async () =>{
     const result = await getMovies()
-    setAllMovies(result)
+    setSingleMovie(result.length)
   }
   useEffect(() => {
   getData()  
   }, []
   );
+  console.log(singleMovie)
   //prazan niz znaci kad se komponenta ucita i nikad vise se ne ponavalja
   return <div>home</div>;
 }

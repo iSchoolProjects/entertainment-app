@@ -4,7 +4,7 @@ const api = axios.create({
 });
 
 
-export const getMovies = async (category, year, title) => {
+export const getMovies = async ({ category, year, title } = {}) => {
     try {
         const { data } = await api.get(`/`, {
             params: {
