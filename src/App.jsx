@@ -1,15 +1,14 @@
 import React from 'react';
 import {Outlet, Route, Routes} from 'react-router';
-// import Home from './components/Home';
+import Home from './components/Home';
 
 /**
  *
  * To be replaced with components
  */
-const Header = () => <nav>Header</nav>;   
-const Sidebar = () => <aside>Aside</aside>;   
-console.log(Home)
-const Home = () => <h1>Home</h1>;
+const Header = () => <nav>Header</nav>;
+const Sidebar = () => <aside>Aside</aside>;
+
 const Movies = () => <h1>Movies</h1>;
 const TvSeries = () => <h1>Tv Series</h1>;
 const Bookmarks = () => <h1>Bookmarks</h1>;
