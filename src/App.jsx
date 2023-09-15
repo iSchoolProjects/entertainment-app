@@ -4,8 +4,12 @@ import Home from './components/Home';
 import Movies from './components/Movies';
 
 
+import Sidebar from './components/Sidebar';
+/**
+ *
+ * To be replaced with components
+ */
 const Header = () => <nav>Header</nav>;
-const Sidebar = () => <aside>Aside</aside>;
 
 const TvSeries = () => <h1>Tv Series</h1>;
 const Bookmarks = () => <h1>Bookmarks</h1>;
@@ -16,9 +20,11 @@ const SignUp = () => <h1>Sign up</h1>;
 const NavigationLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
       <Sidebar />
+      <main>
+        <Header />
+        <Outlet />
+      </main>
     </>
   );
 };
