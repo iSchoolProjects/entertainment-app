@@ -14,7 +14,7 @@ export const getMovies = async ({ category, year, title } = {}) => {
         return data;
     } catch (error) { }
 }
-export const getFavorites = async (ids) => {
+export const getBookmarks = async (ids) => {
     try {
         const { data } = await api.post(`/`, {
             ids

@@ -4,7 +4,7 @@ export default function Movies() {
   const [singleMovie, setSingleMovie]= useState([])
 
   const getData = async () =>{
-    const result = await getMovies()
+    const result = await getMovies({category:'movie'})
     setSingleMovie(result.length)
   }
   useEffect(() => {

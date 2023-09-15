@@ -3,16 +3,14 @@ import {Outlet, Route, Routes} from 'react-router';
 import Home from './components/Home';
 import Movies from './components/Movies';
 
-
 import Sidebar from './components/Sidebar';
+import TvSeries from './components/TvSeries';
+import Bookmarks from './components/Bookmarks';
 /**
  *
  * To be replaced with components
  */
 const Header = () => <nav>Header</nav>;
-
-const TvSeries = () => <h1>Tv Series</h1>;
-const Bookmarks = () => <h1>Bookmarks</h1>;
 
 const LogIn = () => <h1>Log in</h1>;
 const SignUp = () => <h1>Sign up</h1>;
