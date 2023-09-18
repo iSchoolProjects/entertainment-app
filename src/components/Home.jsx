@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {getMovies} from '../api';
-import { all } from 'axios';
+import Search from './Search';
+
 export default function Home() {
   const [allMovies, setAllMovies]= useState({trending:[], recomended : []} )
 
-  const getData = async () =>{
-      const results = await getMovies()
+  const getData = async (title) =>{
+      const results = await getMovies({title})
       const tempMovies ={trending:[], recomended : []}
       for(const result of results){
         if(result.isTrending)tempMovies.trending.push(result)
@@ -14,12 +15,13 @@ export default function Home() {
       setAllMovies(tempMovies)
     
   }
-  console.log(allMovies)
   useEffect(() => {
   getData()  
   }, []
   );
-  return <div>
+  console.log(allMovies)
+  return <>
+        <Search placeholder='Search for movies or TV series'  setData={getData}/>
 
-  </div>;
+  </>;
 }

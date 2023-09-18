@@ -7,34 +7,34 @@ export default function Sidebar() {
   return (
     <aside>
       <div className="logo" onClick={() => navigate('/')}>
-        <img src="./assets/logo.svg" alt="Logo" />
+        <img src="/assets/logo.svg" alt="Logo" />
       </div>
       <nav>
         <ul>
           <li>
             <NavLink to="/" className={({isActive}) => (isActive ? 'active' : '')}>
-              <img src="./assets/icon-nav-home.svg" alt="Home" />
+              <img src="/assets/icon-nav-home.svg" alt="Home" />
             </NavLink>
           </li>
           <li>
             <NavLink to="/movies" className={({isActive}) => (isActive ? 'active' : '')}>
-              <img src="./assets/icon-nav-movies.svg" alt="Movies" />
+              <img src="/assets/icon-nav-movies.svg" alt="Movies" />
             </NavLink>
           </li>
           <li>
             <NavLink to="/tv-series" className={({isActive}) => (isActive ? 'active' : '')}>
-              <img src="./assets/icon-nav-tv-series.svg" alt="Tv series" />
+              <img src="/assets/icon-nav-tv-series.svg" alt="Tv series" />
             </NavLink>
           </li>
           <li>
             <NavLink to="/bookmarks" className={({isActive}) => (isActive ? 'active' : '')}>
-              <img src="./assets/icon-nav-bookmark.svg" alt="Bookmarks" />
+              <img src="/assets/icon-nav-bookmark.svg" alt="Bookmarks" />
             </NavLink>
           </li>
         </ul>
       </nav>
       <div className="avatar">
-        <img src="./assets/image-avatar.png" alt="Bookmarks" />
+        <img src="/assets/image-avatar.png" alt="Bookmarks" />
       </div>
     </aside>
   );
