@@ -1,17 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {getMovies} from '../api';
+import Search from './Search';
 export default function Movies() {
   const [singleMovie, setSingleMovie]= useState([])
 
-  const getData = async () =>{
-    const result = await getMovies({category:'movie'})
+  const getData = async (title) =>{
+    const result = await getMovies({title, category:'movie'})
     setSingleMovie(result.length)
   }
   useEffect(() => {
   getData()  
-  }, []
-  );
-  console.log(singleMovie)
-  //prazan niz znaci kad se komponenta ucita i nikad vise se ne ponavalja
-  return <div>home</div>;
+  }, [])
+
+  return (<><Search placeholder = 'Search for movies' setData={getData}/></>)
 }

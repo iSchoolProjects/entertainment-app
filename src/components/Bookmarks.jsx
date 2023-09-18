@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {getBookmarks} from '../api';
+import Search from './Search';
 export default function Bookmarks() {
   const [bookmarks, setbookmarks]= useState({bookmarkedMovies:[], bookmarkedTvSeries : []})
 
-  const getData = async () =>{
-    const results = await getBookmarks()
+  const getData = async (title) =>{
+    const results = await getBookmarks({title})
     const tempMovies ={bookmarkedMovies:[], bookmarkedTvSeries : []}
     for(const result of results){
       if(result.category==='Movie')tempMovies.bookmarkedMovies.push(result)
@@ -17,10 +18,9 @@ console.log(bookmarks)
   useEffect(() => {
   getData()  
   return ()=>{
-    console.log('sajajs')
   }
   }, []
   );
   //prazan niz znaci kad se komponenta ucita i nikad vise se ne ponavalja
-  return <div>home</div>;
+  return <> <Search placeholder='Search for bookmared shows'  setData={getData}/> </>;
 }
