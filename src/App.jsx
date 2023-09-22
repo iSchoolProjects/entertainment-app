@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Outlet, Route, Routes} from 'react-router';
 import Home from './components/Home';
 import Movies from './components/Movies';
@@ -18,9 +18,7 @@ const NavigationLayout = () => {
     </>
   );
 };
-// useEffect(()=>{
 
-// })
 function App() {
   return (
     <Routes>
@@ -29,7 +27,6 @@ function App() {
         <Route path="/movies" Component={Movies} />
         <Route path="/tv-series" Component={TvSeries} />
         <Route path="/bookmarks" Component={Bookmarks} />
-
       </Route>
       <Route path="/sign-in" Component={LogIn} />
       <Route path="/sign-up" Component={SignUp} />
@@ -38,5 +35,3 @@ function App() {
 }
 
 export default App;
-
-
