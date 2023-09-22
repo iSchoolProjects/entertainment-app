@@ -25,3 +25,5 @@ export default function Bookmarks() {
   //prazan niz znaci kad se komponenta ucita i nikad vise se ne ponavalja
   return <> <Search placeholder='Search for bookmared shows'  setData={getData}/> </>;
 }
+//debounce metod koji se okida na odr vrijeme da bismo smanjili br zahtjeva
+//ka apiju, duzina debounca treba d bude 300sek 

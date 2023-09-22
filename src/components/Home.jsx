@@ -19,7 +19,6 @@ export default function Home() {
   getData()  
   }, []
   );
-  console.log(allMovies)
   return <>
         <Search placeholder='Search for movies or TV series'  setData={getData}/>
 
