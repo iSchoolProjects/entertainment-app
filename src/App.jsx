@@ -1,5 +1,6 @@
 import React from 'react';
 import {Outlet, Route, Routes} from 'react-router';
+import MovieCard from './components/MovieCard';
 
 /**
  *
@@ -8,7 +9,7 @@ import {Outlet, Route, Routes} from 'react-router';
 const Header = () => <nav>Header</nav>;
 const Sidebar = () => <aside>Aside</aside>;
 
-const Home = () => <h1>Home</h1>;
+const Home = () => <MovieCard trending></MovieCard>;
 const Movies = () => <h1>Movies</h1>;
 const TvSeries = () => <h1>Tv Series</h1>;
 const Bookmarks = () => <h1>Bookmarks</h1>;

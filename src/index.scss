@@ -1,3 +1,17 @@
+@import url('./styles/MovieCard.scss');
+
+:root {
+  --Dark-Blue: #10141E;
+  --Semi-Dark-Blue: #161D2F;
+  --Pure-White: #FFFFFF;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +19,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--Dark-Blue, #10141E);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+#root {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  padding: 2rem 0 2rem 2rem;
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 }
