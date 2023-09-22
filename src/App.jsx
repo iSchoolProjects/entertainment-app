@@ -5,13 +5,14 @@ import Movies from './components/Movies';
 import Sidebar from './components/Sidebar';
 import TvSeries from './components/TvSeries';
 import Bookmarks from './components/Bookmarks';
+import LogIn from './components/LogIn';
+import SignUp from './components/SignUp';
 /**
  *
  * To be replaced with components
  */
 
-const LogIn = () => <h1>Log in</h1>;
-const SignUp = () => <h1>Sign up</h1>;
+
 
 const NavigationLayout = () => {
   return (
@@ -40,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+
