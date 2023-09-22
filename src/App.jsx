@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Outlet, Route, Routes} from 'react-router';
 import Home from './components/Home';
 import Movies from './components/Movies';
@@ -7,12 +7,6 @@ import TvSeries from './components/TvSeries';
 import Bookmarks from './components/Bookmarks';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
-/**
- *
- * To be replaced with components
- */
-
-
 
 const NavigationLayout = () => {
   return (
@@ -24,6 +18,9 @@ const NavigationLayout = () => {
     </>
   );
 };
+// useEffect(()=>{
+
+// })
 function App() {
   return (
     <Routes>
