@@ -8,10 +8,6 @@ import Bookmarks from './components/Bookmarks';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Page404 from './components/Page404';
-/**
- *
- * To be replaced with components
- */
 
 
 
@@ -25,6 +21,7 @@ const NavigationLayout = () => {
     </>
   );
 };
+
 function App() {
   return (
     <Routes>
@@ -33,7 +30,6 @@ function App() {
         <Route path="/movies" Component={Movies} />
         <Route path="/tv-series" Component={TvSeries} />
         <Route path="/bookmarks" Component={Bookmarks} />
-
       </Route>
       <Route path="/sign-in" Component={LogIn} />
       <Route path="/sign-up" Component={SignUp} />
@@ -43,5 +39,3 @@ function App() {
 }
 
 export default App;
-
-
