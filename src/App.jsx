@@ -7,6 +7,7 @@ import TvSeries from './components/TvSeries';
 import Bookmarks from './components/Bookmarks';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
+import Page404 from './components/Page404';
 /**
  *
  * To be replaced with components
@@ -36,6 +37,7 @@ function App() {
       </Route>
       <Route path="/sign-in" Component={LogIn} />
       <Route path="/sign-up" Component={SignUp} />
+      <Route path="*" Component={Page404} />
     </Routes>
   );
 }
