@@ -1,3 +1,4 @@
+@import url('./styles/MovieCard.scss');
 @import url('./styles/Sidebar.scss');
 @import url('./styles/Search.scss');
 @import url('./styles/Login-SignUp.scss');
@@ -20,6 +21,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--Dark-Blue, #10141E);
 }
 
 code {
@@ -40,6 +42,20 @@ img {
   grid-template-columns: 96px 1fr;
   padding: 2rem 0 2rem 2rem;
 
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+#root {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  padding: 2rem 0 2rem 2rem;
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
     padding: 0;
