@@ -1,32 +1,17 @@
 import React, {useState} from 'react';
 
-export default function MovieCard({trending, isBookmarked, category}) {
-  const [cardDetails] = useState({
-    thumbnail: {
-      trending: {
-        large: './assets/thumbnails/beyond-earth/trending/large.jpg',
-      },
-      regular: {
-        small: './assets/thumbnails/beyond-earth/regular/small.jpg',
-        medium: './assets/thumbnails/beyond-earth/regular/medium.jpg',
-        large: './assets/thumbnails/beyond-earth/regular/large.jpg',
-      },
-    },
-    year: '2019',
-    category: 'Movie',
-    rating: 'PG',
-    title: 'Beyond Earth',
-    isBookmarked: 'true',
-  });
+export default function MovieCard({cardDetails:cards=[], trending, category, isBookmarked}) {
+
   return (
     <>
+      <h2>Trending</h2>
       <div className={`section  ${trending ? 'trending' : ''}`}>
-        {new Array(15).fill(0).map((_, i) => (
+        {cards.map((cardDetails, i) => (
           <div className="card" key={i}>
             <div className="card-content">
               <img
                 className="trending-img"
-                src={trending ? cardDetails?.thumbnail?.trending?.large : cardDetails?.thumbnail.regular.large}
+                src={trending ? cardDetails?.thumbnail?.trending?.large : cardDetails?.thumbnail?.regular?.large}
                 alt=""
               />
               <div className="details-title">

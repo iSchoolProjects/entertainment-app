@@ -8,7 +8,7 @@ export default function Search({setData, placeholder}) {
     if (e.target.value.length >= 3) {
       timeout = setTimeout(() => {
         setData(e.target.value);
-      }, 3000);
+      }, 300);
     }
   };
 

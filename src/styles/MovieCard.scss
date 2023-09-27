@@ -1,7 +1,13 @@
+.section{
+
+        display: grid;
+        margin-top: 32px;
+  
 .card{
     display: flex;
     flex-direction: column;
     position: relative;
+ 
 }
 
 .trending-img{
@@ -31,9 +37,11 @@ border-radius: 28px;
 left: 35%;
 top:40%;
 box-sizing: border-box;
+cursor: pointer;
 }
 
-.trending .card-content{
+
+&.trending .card-content{
   justify-content: end;
 }
 
@@ -42,7 +50,7 @@ box-sizing: border-box;
    flex-direction: column;
 }
 
-.trending .details-title{
+&.trending .details-title{
     position: absolute;
 }
 
@@ -88,25 +96,23 @@ box-sizing: border-box;
 .bookmark img{
     width: fit-content;
 }
-.section{
-    display: grid;
-}
 
-.trending{
-    // display: flex;
+
+&.trending{
     grid-auto-flow: column;
+    grid-template-columns: unset;
     overflow-x: scroll;
     padding-bottom: 8px;
 }
  
-::-webkit-scrollbar{
+&::-webkit-scrollbar{
     border-radius: 30px;
     background-color:#161D2F;
     opacity:0.75;
     height: 10px;
     padding-inline: 20px;
 }
-::-webkit-scrollbar-thumb{
+&::-webkit-scrollbar-thumb{
     background-color:hsl(0, 0%, 100%, 0.1);
     border-radius: 10px;
 }
@@ -120,12 +126,12 @@ box-sizing: border-box;
 
 
 @media screen and (max-width:768px) {
-    .card{
+    &.trending .card{
         width: 240px;
         margin-bottom: 16px;
       }
 
-    .trending .card h2{
+    &.trending .card h2{
         font-size: 15px;
     }
 
@@ -142,23 +148,24 @@ box-sizing: border-box;
         margin: 8px;
     }
 
-    .section{
+    
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         padding-inline: 15px;
-    }
+    
 }
 
 @media screen and (min-width:768px) {
-    .card{
+    &.trending .card{
       width: 470px;
     }
 
+  
     .bookmark{
        margin: 16px 24px;
     }
 
-    .trending .details-title{
+    &.trending .details-title{
         padding: 24px;
     }
 
@@ -170,30 +177,31 @@ box-sizing: border-box;
         font-size: 18px;
     }
 
-    .card h2, .trending .card h2{
+    .card h2, &.trending .card h2{
         font-size:24px;
     }
 
-    .section{
+ 
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         padding-inline: 25px;
-    }
+    
 }
 
 @media screen and (min-width:992px) {
-    .card{
+    &.trending .card{
         width:470px;
     }
-
+  
     .details-title{
         margin-top: 10px;
     }
 
-    .section{
+ 
         grid-template-columns: repeat(4, 1fr);
         padding-inline: 0;
-    }
+       
+    
 
 
-}
+}}

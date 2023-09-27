@@ -61,3 +61,15 @@ img {
     padding: 0;
   }
 }
+
+main{
+  overflow-x: hidden;
+}
+
+@media screen and (min-width:992px) {
+  main{
+    width: calc(100% - 35px);
+    margin-left: 2rem;
+   }
+  
+}
