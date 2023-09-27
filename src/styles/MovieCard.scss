@@ -1,207 +1,219 @@
-.section{
+h2 {
+  color: #ffff;
+  font-size: 32px;
+  font-weight: 300;
+}
+.section {
+  display: grid;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
-        display: grid;
-        margin-top: 32px;
-  
-.card{
+  h3 {
+    font-weight: 500;
+  }
+
+  .card {
     display: flex;
     flex-direction: column;
     position: relative;
- 
-}
+  }
 
-.trending-img{
+  .trending-img {
     width: 100%;
     border-radius: 8px;
-}
+  }
 
-.card:hover::before{
-  content: ''; 
-position: absolute;
-inset: 0;
-background-color: rgba(22, 29, 47, 0.506);
-}
-
-.card:hover::after{
-content: 'Play';
-color: #ffffff;
-padding: 10px 30px;
-background-image: url('../../public/assets/icon-play.svg');
-background-repeat: no-repeat;
-background-position: 10% center;
-position: absolute;
-width: 110px;
-text-align: right;
-background-color:#ffffff19;
-border-radius: 28px;
-left: 35%;
-top:40%;
-box-sizing: border-box;
-cursor: pointer;
-}
-
-
-&.trending .card-content{
-  justify-content: end;
-}
-
-.card-content{
-   display: flex;
-   flex-direction: column;
-}
-
-&.trending .details-title{
+  .card:hover::before {
+    content: '';
     position: absolute;
-}
+    inset: 0;
+    background-color: rgba(22, 29, 47, 0.506);
+  }
 
-.details-title{
+  &.trending .card:hover::after,
+  .card:hover::after {
+    content: 'Play';
     color: #ffffff;
-}
+    padding: 10px 30px;
+    background-image: url('../../public/assets/icon-play.svg');
+    background-repeat: no-repeat;
+    background-position: 10% center;
+    position: absolute;
+    width: 110px;
+    text-align: right;
+    background-color: #ffffff19;
+    border-radius: 28px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
 
-.details-title p{
-    opacity: 0.75;
-}
+  &.trending .card:hover::after {
+    left: 35%;
+    top: 40%;
+  }
 
-.movie-details{
+  .card:hover::after {
+    left: 30%;
+    top: 33%;
+  }
+
+  &.trending .card-content {
+    justify-content: end;
+  }
+
+  .card-content {
     display: flex;
-}
+    flex-direction: column;
+  }
 
-.movie-details p{
-    margin-right:10px;
-}
+  &.trending .details-title {
+    position: absolute;
+  }
 
-.movie-details img{
-    background-color:#808080;
+  .details-title {
+    color: #ffffff;
+  }
+
+  .details-title p {
+    opacity: 0.75;
+  }
+
+  .movie-details {
+    display: flex;
+  }
+
+  .movie-details p {
+    margin-right: 10px;
+  }
+
+  .movie-details img {
+    background-color: #808080;
     opacity: 0.75;
     width: fit-content;
-}
+    margin-right: 5px;
+  }
 
-.bookmark{
+  .bookmark {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #10141E;
-    opacity:0.500647;
+    background-color: #10141e;
+    opacity: 0.500647;
     display: flex;
     justify-content: center;
     align-self: end;
     align-items: center;
     position: absolute;
-}
+  }
 
-.bookmark:hover{
+  .bookmark:hover {
     cursor: pointer;
-}
+  }
 
-.bookmark img{
+  .bookmark img {
     width: fit-content;
-}
+  }
 
-
-&.trending{
+  &.trending {
     grid-auto-flow: column;
-    grid-template-columns: unset;
+    grid-template-columns: 470px;
     overflow-x: scroll;
     padding-bottom: 8px;
-}
- 
-&::-webkit-scrollbar{
+  }
+
+  &::-webkit-scrollbar {
     border-radius: 30px;
-    background-color:#161D2F;
-    opacity:0.75;
+    background-color: #161d2f;
+    opacity: 0.75;
     height: 10px;
     padding-inline: 20px;
-}
-&::-webkit-scrollbar-thumb{
-    background-color:hsl(0, 0%, 100%, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 100%, 0.1);
     border-radius: 10px;
-}
+  }
 
-.play{
+  .play {
     display: flex;
     align-items: center;
-    background-color:#ffff;
+    background-color: #ffff;
     opacity: 0.25;
-}
+  }
 
-
-@media screen and (max-width:768px) {
-    &.trending .card{
-        width: 240px;
-        margin-bottom: 16px;
-      }
-
-    &.trending .card h2{
-        font-size: 15px;
+  @media screen and (max-width: 768px) {
+    &.trending .card {
+      width: 240px;
+      margin-bottom: 16px;
     }
 
-    .card h2{
-        font-size: 18px;
-    }  
-
-    .details-title{
-        margin-top: 10px;
-        padding: 10px;
+    &.trending .card h3 {
+      font-size: 15px;
     }
 
-    .bookmark{
-        margin: 8px;
+    .card h3 {
+      font-size: 18px;
     }
 
-    
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding-inline: 15px;
-    
-}
+    .details-title {
+      margin-top: 10px;
+      padding: 10px;
+    }
 
-@media screen and (min-width:768px) {
-    &.trending .card{
+    .movie-details {
+      width: 125%;
+    }
+
+    .movie-details p {
+      margin-right: 5px;
+    }
+
+    .bookmark {
+      margin: 8px;
+    }
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &.trending .card {
       width: 470px;
     }
 
-  
-    .bookmark{
-       margin: 16px 24px;
+    .bookmark {
+      margin: 16px 24px;
     }
 
-    &.trending .details-title{
-        padding: 24px;
+    &.trending .details-title {
+      padding: 24px;
     }
 
-    .details-title{
-        // padding: 24px;
+    .details-title {
+      padding: 0;
     }
 
-    .details-title p{
-        font-size: 18px;
+    .details-title p {
+      font-size: 18px;
     }
 
-    .card h2, &.trending .card h2{
-        font-size:24px;
+    .card h3,
+    &.trending .card h3 {
+      font-size: 24px;
     }
 
- 
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        padding-inline: 25px;
-    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  @media screen and (min-width: 992px) {
+    &.trending .card {
+      width: 470px;
+    }
+
+    .details-title {
+      margin-top: 10px;
+    }
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 0;
+  }
 }
-
-@media screen and (min-width:992px) {
-    &.trending .card{
-        width:470px;
-    }
-  
-    .details-title{
-        margin-top: 10px;
-    }
-
- 
-        grid-template-columns: repeat(4, 1fr);
-        padding-inline: 0;
-       
-    
-
-
-}}

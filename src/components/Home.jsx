@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {getMovies} from '../api';
 import Search from './Search';
 import MovieCard from './MovieCard';
+import Movies from './Movies';
 
 export default function Home() {
   const [allMovies, setAllMovies] = useState({trending: [], recomended: []});
@@ -21,9 +22,8 @@ export default function Home() {
   return (
     <>
       <Search placeholder="Search for movies or TV series" setData={getData} />
-      <MovieCard placeholder='Trending' cardDetails={allMovies.trending} trending />
-      <MovieCard placeholder='Recommended' cardDetails={allMovies.recomended}  />
-
+      <MovieCard placeholder="Trending" cardDetails={allMovies.trending} trending />
+      <MovieCard placeholder="Recommended for you" cardDetails={allMovies.recomended} />
     </>
   );
 }
