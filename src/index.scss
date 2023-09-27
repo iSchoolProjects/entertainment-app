@@ -2,12 +2,8 @@
 @import url('./styles/Sidebar.scss');
 @import url('./styles/Search.scss');
 @import url('./styles/Login-SignUp.scss');
+@import url('./styles/Page.scss');
 
-:root {
-  --Dark-Blue: #10141e;
-  --Semi-Dark-Blue: #161d2f;
-  --Pure-White: #ffffff;
-}
 
 * {
   padding: 0;
