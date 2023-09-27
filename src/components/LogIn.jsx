@@ -19,7 +19,7 @@ export default function LogIn() {
     }
   };
   return (
-    <>
+    <div className='auth'>
       <div className="card">
         <div>
           <img src="./assets/logo.svg" alt="" />
@@ -39,6 +39,6 @@ export default function LogIn() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

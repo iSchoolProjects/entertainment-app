@@ -21,7 +21,7 @@ export default function SignUp() {
   };
 
   return (
-    <>
+    <div className='auth'>
       <div className="card">
         <div>
           <img src="./assets/logo.svg" alt="" />
@@ -42,6 +42,6 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
